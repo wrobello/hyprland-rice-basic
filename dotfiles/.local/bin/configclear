@@ -1,6 +1,6 @@
 #!/bin/bash
 /usr/bin/git config --global init.defaultBranch master
-rm -rf ${HOME}/proj/hyprland-rice-basic/.git ${HOME}/proj/hyprland-rice-basic/README.md ${HOME}/proj/hyprland-rice-basic/LICENSE
+rm -rf ${HOME}/proj/hyprland-rice-basic/.git ${HOME}/proj/hyprland-rice-basic/README.md ${HOME}/proj/hyprland-rice-basic/LICENSE ${HOME}/proj/hyprland-rice-basic/dotfiles
 mkdir ${HOME}/proj/hyprland-rice-basic/.git
 git init --bare ${HOME}/proj/hyprland-rice-basic/.git
 /usr/bin/git --git-dir=${HOME}/proj/hyprland-rice-basic/.git --work-tree=${HOME}/proj/hyprland-rice-basic config --local status.ShowUntrackedFiles no
