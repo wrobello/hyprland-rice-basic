@@ -1,0 +1,11 @@
+#!/bin/bash
+/usr/bin/git config --global init.defaultBranch master
+rm -rf ${HOME}/proj/hyprland-rice-basic/.git ${HOME}/proj/hyprland-rice-basic/README.md ${HOME}/proj/hyprland-rice-basic/LICENSE
+mkdir ${HOME}/proj/hyprland-rice-basic/.git
+git init --bare ${HOME}/proj/hyprland-rice-basic/.git
+/usr/bin/git --git-dir=${HOME}/proj/hyprland-rice-basic/.git --work-tree=${HOME}/proj/hyprland-rice-basic config --local status.ShowUntrackedFiles no
+/usr/bin/git --git-dir=${HOME}/proj/hyprland-rice-basic/.git --work-tree=${HOME}/proj/hyprland-rice-basic remote add origin git@github.com:wrobello/hyprland-rice-basic.git
+/usr/bin/git --git-dir=${HOME}/proj/hyprland-rice-basic/.git --work-tree=${HOME}/proj/hyprland-rice-basic remote set-url origin --push git@github.com:wrobello/hyprland-rice-basic.git
+/usr/bin/git --git-dir=${HOME}/proj/hyprland-rice-basic/.git --work-tree=${HOME}/proj/hyprland-rice-basic checkout -b master
+/usr/bin/git --git-dir=${HOME}/proj/hyprland-rice-basic/.git --work-tree=${HOME}/proj/hyprland-rice-basic pull origin master
+/usr/bin/git --git-dir=${HOME}/proj/hyprland-rice-basic/.git --work-tree=${HOME}/proj/hyprland-rice-basic branch -u origin/master master

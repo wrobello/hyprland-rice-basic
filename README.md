@@ -1,2 +1,2 @@
 # hyprland-rice-basic
-Basic rice for hyprland.
+Basic Rice For Hyprland.
